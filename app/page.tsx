@@ -1,3 +1,9 @@
+import Fichier from "@/Components/Fichier";
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Fichier></Fichier>
+    </>
+  );
 }
