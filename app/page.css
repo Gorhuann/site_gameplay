@@ -5,18 +5,16 @@ html, body{
 
 main{
     display: flex;
-    height: 100vh;
 }
 
 section:first-of-type{
     width: 40vw;
     border-right: 1px solid red;
     overflow-y: scroll;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 100vh;
 }
 
 section:last-of-type{
     width: 60vw;
+    height: 100vh;
 }
