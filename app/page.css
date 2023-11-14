@@ -1,0 +1,20 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+}
+
+section:first-of-type{
+    width: 40vw;
+    border-right: 1px solid red;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section:last-of-type{
+    width: 60vw;
+    height: 100vh;
+}
