@@ -10,7 +10,6 @@ export default function Fichier(props) {
 
   const handleClick = () => {
     setOpen(!open);
-    console.log("caca");
   };
 
   if (open) {
