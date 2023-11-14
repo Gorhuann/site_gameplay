@@ -17,25 +17,32 @@ export default function Fichier(props) {
     return (
       <fieldset className={style.open}>
         <legend onClick={handleClick}>
-          <Image
-            src="/IMG/Fichier/open.png"
-            alt="Fichie ouvert"
-            width={100}
-            height={100}
-          />
+          <div>
+            <Image
+              src="/IMG/Fichier/open.png"
+              alt="Fichie ouvert"
+              width={100}
+              height={100}
+            />
+            <p>{props.nomFichier}</p>
+          </div>
         </legend>
+        {props.children}
       </fieldset>
     );
   } else {
     return (
       <fieldset className={style.ferme}>
         <legend onClick={handleClick}>
-          <Image
-            src="/IMG/Fichier/closed.png"
-            alt="Fichie fermé"
-            width={100}
-            height={100}
-          />
+          <div>
+            <Image
+              src="/IMG/Fichier/closed.png"
+              alt="Fichie fermé"
+              width={100}
+              height={100}
+            />
+            <p>{props.nomFichier}</p>
+          </div>
         </legend>
       </fieldset>
     );
