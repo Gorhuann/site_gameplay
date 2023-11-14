@@ -1,0 +1,22 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+}
+
+section:first-of-type{
+    width: 40vw;
+    border-right: 1px solid red;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section:last-of-type{
+    width: 60vw;
+}
