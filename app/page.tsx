@@ -1,4 +1,4 @@
-import Fichier from "@/Components/Fichier";
+import Fichier from "@/Components/Dossier";
 import "./page.css";
 
 export default function Home() {

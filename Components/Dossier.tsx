@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import style from "./Fichier.module.css";
+import style from "./Dossier.module.css";
 import Image from "next/image";
 
-export default function Fichier(props) {
+export default function Dossier(props) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -18,8 +18,8 @@ export default function Fichier(props) {
         <legend onClick={handleClick}>
           <div>
             <Image
-              src="/IMG/Fichier/open.png"
-              alt="Fichie ouvert"
+              src="/IMG/Dossier/open.png"
+              alt="Dossier ouvert"
               width={100}
               height={100}
             />
@@ -35,8 +35,8 @@ export default function Fichier(props) {
         <legend onClick={handleClick}>
           <div>
             <Image
-              src="/IMG/Fichier/closed.png"
-              alt="Fichie fermé"
+              src="/IMG/Dossier/closed.png"
+              alt="Dossier fermé"
               width={100}
               height={100}
             />
