@@ -1,22 +1,10 @@
-.ferme{
-    border: none;
-}
-
-.ferme legend div{
+.dossier{
     display: flex;
     flex-direction: column;
+
     align-items: center;
 }
 
-.ferme legend div p{
-    margin: 0;
-}
-
-.open legend div{
-    display: flex;
-    align-items: center;
-}
-
-.open legend div p{
+.dossier p{
     margin: 0;
 }

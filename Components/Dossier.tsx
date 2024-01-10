@@ -14,36 +14,31 @@ export default function Dossier(props) {
 
   if (open) {
     return (
-      <fieldset className={style.open}>
-        <legend onClick={handleClick}>
-          <div>
-            <Image
-              src="/IMG/Dossier/open.png"
-              alt="Dossier ouvert"
-              width={100}
-              height={100}
-            />
-            <p>{props.nomFichier}</p>
-          </div>
-        </legend>
-        {props.children}
-      </fieldset>
+      <legend onClick={handleClick}>
+        <div className={style.dossier}>
+          <Image
+            src="/IMG/Dossier/open.png"
+            alt="Dossier ouvert"
+            width={100}
+            height={100}
+          />
+          <p>{props.nomFichier}</p>
+        </div>
+      </legend>
     );
   } else {
     return (
-      <fieldset className={style.ferme}>
-        <legend onClick={handleClick}>
-          <div>
-            <Image
-              src="/IMG/Dossier/closed.png"
-              alt="Dossier fermé"
-              width={100}
-              height={100}
-            />
-            <p>{props.nomFichier}</p>
-          </div>
-        </legend>
-      </fieldset>
+      <legend onClick={handleClick}>
+        <div className={style.dossier}>
+          <Image
+            src="/IMG/Dossier/closed.png"
+            alt="Dossier fermé"
+            width={100}
+            height={100}
+          />
+          <p>{props.nomFichier}</p>
+        </div>
+      </legend>
     );
   }
 }
