@@ -1,6 +1,7 @@
 .corps{
     border: 1px solid black;
     width: fit-content;
+    position: absolute;
 }
 
 .handle{

@@ -7,14 +7,18 @@ main{
     display: flex;
 }
 
-section:first-of-type{
-    width: 40vw;
-    border-right: 1px solid red;
-    overflow-y: scroll;
+section{
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
 }
 
-section:last-of-type{
-    width: 60vw;
-    height: 100vh;
+#displayFiles{
+    display: flex;
+    margin-top: 20px;
+}
+
+#displayWindows{
+    
 }
