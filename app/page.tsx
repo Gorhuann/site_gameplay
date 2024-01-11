@@ -13,7 +13,9 @@ export default function Home() {
           <Fichier></Fichier>
         </div>
         <div id="displayFiles">
-          <Dossier nomFichier="niveau 1" />
+          <Dossier nomFichier="niveau 1">
+            <Fichier></Fichier>
+          </Dossier>
           <Dossier nomFichier="niveau 2" />
           <Dossier nomFichier="niveau 3" />
         </div>
