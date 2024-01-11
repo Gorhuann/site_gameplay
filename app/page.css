@@ -17,6 +17,10 @@ section:first-of-type{
 section:last-of-type{
     width: 60vw;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 ::-webkit-scrollbar {
