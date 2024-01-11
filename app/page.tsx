@@ -25,7 +25,15 @@ export default function Home() {
           <Dossier nomFichier="image"></Dossier>
           <Dossier nomFichier="rapport"></Dossier>
         </Dossier>
-        <Dossier nomFichier="niveau 2"></Dossier>
+        <Dossier nomFichier="niveau 2">
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+          <Dossier nomFichier="rapport"></Dossier>
+        </Dossier>
         <Dossier nomFichier="niveau 3"></Dossier>
       </section>
       <section>
