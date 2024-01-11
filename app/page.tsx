@@ -2,7 +2,6 @@
 
 import Dossier from "@/Components/Dossier";
 import "./page.css";
-import Draggable from "react-draggable";
 import Fichier from "@/Components/Fichier";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
         <Dossier nomFichier="niveau 3"></Dossier>
       </section>
       <section>
-        <Fichier></Fichier>
+        <Fichier />
       </section>
     </main>
   );
