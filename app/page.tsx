@@ -16,7 +16,11 @@ export default function Home() {
         <Dossier nomFichier="niveau 1">
           <Shortcut
             openFile={() => setActiveIndex(true)}
-            nomFichier="post-it"
+            nomFichier="Post-it"
+          ></Shortcut>
+          <Shortcut
+            openFile={() => setActiveIndex(true)}
+            nomFichier="Carte de membre"
           ></Shortcut>
           <Dossier nomFichier="image"></Dossier>
           <Dossier nomFichier="rapport"></Dossier>
