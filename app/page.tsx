@@ -25,7 +25,7 @@ export default function Home() {
         <Dossier nomFichier="niveau 3"></Dossier>
       </section>
       <section>
-        <Fichier onShow={activeIndex} />
+        <Fichier closeFile={() => setActiveIndex(false)} onShow={activeIndex} />
       </section>
     </main>
   );
