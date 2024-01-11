@@ -34,3 +34,12 @@
 .content button:hover{
     width: 25%;
 }
+
+.content b{
+    margin-top: 10px;
+    color: red;
+}
+
+.content h4{
+    color: green;
+}

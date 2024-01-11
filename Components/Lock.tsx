@@ -4,21 +4,52 @@ import style from "./Lock.module.css";
 export default function Lock(props) {
   const [userCode, setUserCode] = useState("");
 
+  let input: string;
+
   const handleClick = () => {
-    console.log(userCode);
+    setUserCode(input);
   };
 
-  return (
-    <div className={style.corps}>
-      <div className={style.handle}>
-        <h3>{props.nomLock}</h3>
-        <div onClick={props.closeFile}>X</div>
+  if (userCode === props.code) {
+    return (
+      <div className={style.corps}>
+        <div className={style.handle}>
+          <h3>{props.nomLock}</h3>
+          <div onClick={props.closeFile}>X</div>
+        </div>
+        <div className={style.content}>
+          <h4>Le dossier est ouvert !</h4>
+        </div>
       </div>
-      <div className={style.content}>
-        <p>Pour ouvrir le dossier il vous faut un code !</p>
-        <input type="text" onChange={(e) => setUserCode(e.target.value)} />
-        <button onClick={handleClick}>Valider</button>
+    );
+  } else if (userCode !== "") {
+    return (
+      <div className={style.corps}>
+        <div className={style.handle}>
+          <h3>{props.nomLock}</h3>
+          <div onClick={props.closeFile}>X</div>
+        </div>
+        <div className={style.content}>
+          <p>Pour ouvrir le dossier il vous faut un code !</p>
+          <input type="text" onChange={(e) => (input = e.target.value)} />
+          <b>Le code est incorrect !</b>
+          <button onClick={handleClick}>Valider</button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className={style.corps}>
+        <div className={style.handle}>
+          <h3>{props.nomLock}</h3>
+          <div onClick={props.closeFile}>X</div>
+        </div>
+        <div className={style.content}>
+          <p>Pour ouvrir le dossier il vous faut un code !</p>
+          <input type="text" onChange={(e) => (input = e.target.value)} />
+          <button onClick={handleClick}>Valider</button>
+        </div>
+      </div>
+    );
+  }
 }

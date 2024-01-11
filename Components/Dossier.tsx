@@ -12,7 +12,7 @@ export default function Dossier(props) {
     setOpen(!open);
   };
 
-  if (open) {
+  if (open && !props.locked) {
     return (
       <fieldset className={style.open}>
         <legend onClick={handleClick}>
