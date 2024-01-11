@@ -16,7 +16,7 @@ export default function Dossier(props) {
     return (
       <fieldset className={style.open}>
         <legend onClick={handleClick}>
-          <div>
+          <div onClick={props.openFile}>
             <Image
               src="/IMG/Dossier/open.png"
               alt="Dossier ouvert"
@@ -33,7 +33,7 @@ export default function Dossier(props) {
     return (
       <fieldset className={style.ferme}>
         <legend onClick={handleClick}>
-          <div>
+          <div onClick={props.openFile}>
             <Image
               src="/IMG/Dossier/closed.png"
               alt="Dossier fermé"
