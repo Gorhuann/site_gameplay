@@ -7,7 +7,7 @@ export default function Shortcut(props) {
       <Image
         src="/IMG/shortcut.png"
         alt="Dossier ouvert"
-        width={115}
+        width={110}
         height={100}
       />
       <p>{props.nomFichier}</p>
