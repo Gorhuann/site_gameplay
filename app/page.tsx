@@ -3,6 +3,7 @@
 import Dossier from "@/Components/Dossier";
 import Fichier from "@/Components/Fichier";
 import Shortcut from "@/Components/Shortcut";
+import Lock from "@/Components/Lock";
 
 import { useState } from "react";
 import "./page.css";
@@ -38,6 +39,7 @@ export default function Home() {
       </section>
       <section>
         <Fichier closeFile={() => setActiveIndex(false)} onShow={activeIndex} />
+        <Lock></Lock>
       </section>
     </main>
   );

@@ -5,22 +5,22 @@ html, body{
 
 main{
     display: flex;
+
+    height: 100vh;
 }
 
 section:first-of-type{
     width: 40vw;
     border-right: 1px solid red;
     overflow-y: scroll;
-    height: 100vh;
 }
 
 section:last-of-type{
     width: 60vw;
-    height: 100vh;
 
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 ::-webkit-scrollbar {
