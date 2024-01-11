@@ -1,0 +1,50 @@
+[
+	{
+	    "nom":"Compte rendu d'avant enquête",
+	    "contenu":"Fichier contenant des infos liés au scénario a lire avant l'enquête sous forme d'un compte rendu",
+	    "url":" ",
+	    "niveau":"niveau 1 -> dossier compte rendu d'avant enquête"
+	}
+	,
+	{
+        "nom":"Post-it des tâches à faire",
+        "contenu":"Post-it contenant des tâches a faire dans la salle d'arcade",
+        "url":" ",
+        "niveau":"niveau 1 -> Post-it (protégé par un prompt)"
+    }
+    ,
+    {
+        "nom":"Carte de membre",
+        "contenu":"Ancienne carte de membre de Kurt, contient des infos sur lui",
+        "url":" ",
+        "niveau":"niveau 1 -> Carte de membre"
+    }
+    ,
+    {
+        "nom":"Photo trophée 1",
+        "contenu":"Photo d'archive d'une compétition et de sa date",
+        "url":" ",
+        "niveau":"niveau 1 -> Photo"
+    }
+    ,
+    {
+        "nom":"Photo trophée 2",
+        "contenu":"Photo d'archive d'une compétition et de sa date",
+        "url":" ",
+        "niveau":"niveau 1 -> Photo"
+    }
+    ,
+    {
+        "nom":"Photo trophée 3",
+        "contenu":"Photo d'archive d'une compétition et de sa date",
+        "url":" ",
+        "niveau":"niveau 1 -> Photo"
+    }
+    ,
+    {
+        "nom":"Compte rendu de l'enquête",
+        "contenu":"Fichier contenant des infos liés au scénario a lire après le niveau 1 sous forme d'un compte rendu",
+        "url":" ",
+        "niveau":"niveau 1 -> Rapport de l'enquête (protégé par un prompt)"
+    }
+]
