@@ -4,7 +4,6 @@
 
 .ferme legend div{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -19,4 +18,9 @@
 
 .open legend div p{
     margin: 0;
+}
+
+.open, .ferme{
+    display: flex;
+    flex-direction: column;
 }
