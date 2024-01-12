@@ -11,7 +11,7 @@ export default function Fichier(props) {
           <div onClick={props.closeFile}>X</div>
         </div>
         <div className={style.content}>
-          This readme is really dragging on...
+          <img src={props.imgUrl} alt="" />
         </div>
       </div>
     );

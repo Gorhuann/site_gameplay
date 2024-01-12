@@ -10,7 +10,6 @@ import "./page.css";
 
 export default function Home() {
   const [lock_Niv1_PostIt, setLock_Niv1_PostIt] = useState(true);
-  const [window_LockNiv1_PostIt, setWindow_LockNiv1_PostIt] = useState(false);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -19,18 +18,31 @@ export default function Home() {
       <section>
         <Dossier nomFichier="niveau 1" locked={false}>
           <Shortcut
-            openFile={() => setActiveIndex(true)}
+            openFile={() => setActiveIndex(1)}
             nomFichier="Carte de membre"
-          ></Shortcut>
-          <Dossier nomFichier="image" locked={false}></Dossier>
+          />
+          <Dossier nomFichier="image" locked={false}>
+            <Shortcut
+              openFile={() => setActiveIndex(2)}
+              nomFichier="BLB_Tournament.jpeg"
+            />
+            <Shortcut
+              openFile={() => setActiveIndex(3)}
+              nomFichier="BLB_Explorer.jpeg"
+            />
+            <Shortcut
+              openFile={() => setActiveIndex(4)}
+              nomFichier="CoupeRegional.jpeg"
+            />
+          </Dossier>
           <Dossier
             nomFichier="post-it"
             locked={lock_Niv1_PostIt}
-            openFile={() => setWindow_LockNiv1_PostIt(true)}
+            openFile={() => setActiveIndex(5)}
           >
             <Shortcut
-              openFile={() => setActiveIndex(true)}
-              nomFichier="Tache à faire !"
+              openFile={() => setActiveIndex(6)}
+              nomFichier="Tache a faire"
             />
           </Dossier>
           <Dossier nomFichier="rapport" locked={false}></Dossier>
@@ -41,16 +53,42 @@ export default function Home() {
       </section>
       <section>
         <Fichier
-          closeFile={() => setActiveIndex(-1)}
+          closeFile={() => setActiveIndex(0)}
           onShow={activeIndex === 1}
+          nomFichier="Carte de membre"
+          imgUrl="/IMG/Niv1/member_card.png"
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 2}
+          nomFichier="BLB_Tournament.jpeg"
+          imgUrl="/IMG/Niv1/blb_tournament.jpg"
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 3}
+          nomFichier="BLB_Explorer"
+          imgUrl="/IMG/Niv1/blb.jpg"
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 4}
+          nomFichier="CoupeRegional.jpeg"
+          imgUrl="/IMG/Niv1/coupe_regional.jpg"
         />
         <Lock
           nomLock="Mot de passe dossier post-it"
           code="4c617261"
           locked={lock_Niv1_PostIt}
-          onShow={window_LockNiv1_PostIt}
+          onShow={activeIndex === 5}
           unlocked={() => setLock_Niv1_PostIt(false)}
-          closeFile={() => setWindow_LockNiv1_PostIt(false)}
+          closeFile={() => setActiveIndex(0)}
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 6}
+          nomFichier="Tache a faire"
+          imgUrl="/IMG/Niv1/post_it.png"
         />
       </section>
     </main>
