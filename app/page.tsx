@@ -45,11 +45,11 @@ export default function Home() {
               nomFichier="Tache a faire"
             />
           </Dossier>
-          <Dossier nomFichier="rapport" locked={false}></Dossier>
+          <Dossier nomFichier="rapport" locked={true}></Dossier>
         </Dossier>
 
-        <Dossier nomFichier="niveau 2"></Dossier>
-        <Dossier nomFichier="niveau 3"></Dossier>
+        <Dossier nomFichier="niveau 2" locked={true}></Dossier>
+        <Dossier nomFichier="niveau 3" locked={true}></Dossier>
       </section>
       <section>
         <Fichier
