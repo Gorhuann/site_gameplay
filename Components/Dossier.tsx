@@ -29,6 +29,22 @@ export default function Dossier(props) {
         {props.children}
       </fieldset>
     );
+  } else if (props.locked) {
+    return (
+      <fieldset className={style.ferme}>
+        <legend onClick={handleClick}>
+          <div onClick={props.openFile}>
+            <Image
+              src="/IMG/Dossier/closed.png"
+              alt="Dossier fermé"
+              width={100}
+              height={100}
+            />
+            <p>{props.nomFichier}</p>
+          </div>
+        </legend>
+      </fieldset>
+    );
   } else {
     return (
       <fieldset className={style.ferme}>

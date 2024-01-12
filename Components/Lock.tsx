@@ -8,9 +8,10 @@ export default function Lock(props) {
 
   const handleClick = () => {
     setUserCode(input);
+    if (input === props.code) props.unlocked();
   };
 
-  if (userCode === props.code) {
+  if (props.onShow && userCode === props.code) {
     return (
       <div className={style.corps}>
         <div className={style.handle}>
@@ -22,7 +23,7 @@ export default function Lock(props) {
         </div>
       </div>
     );
-  } else if (userCode !== "") {
+  } else if (props.onShow && userCode !== "") {
     return (
       <div className={style.corps}>
         <div className={style.handle}>
@@ -37,7 +38,7 @@ export default function Lock(props) {
         </div>
       </div>
     );
-  } else {
+  } else if (props.onShow) {
     return (
       <div className={style.corps}>
         <div className={style.handle}>
