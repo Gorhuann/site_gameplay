@@ -12,7 +12,7 @@ export default function Home() {
   const [lock_Niv1_PostIt, setLock_Niv1_PostIt] = useState(true);
   const [window_LockNiv1_PostIt, setWindow_LockNiv1_PostIt] = useState(false);
 
-  const [activeIndex, setActiveIndex] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <main>
@@ -40,7 +40,10 @@ export default function Home() {
         <Dossier nomFichier="niveau 3"></Dossier>
       </section>
       <section>
-        <Fichier closeFile={() => setActiveIndex(false)} onShow={activeIndex} />
+        <Fichier
+          closeFile={() => setActiveIndex(-1)}
+          onShow={activeIndex === 1}
+        />
         <Lock
           nomLock="Mot de passe dossier post-it"
           code="4c617261"

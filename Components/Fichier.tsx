@@ -7,7 +7,7 @@ export default function Fichier(props) {
     return (
       <div className={style.corps}>
         <div className={style.handle}>
-          <h3>Title</h3>
+          <h3>{props.nomFichier}</h3>
           <div onClick={props.closeFile}>X</div>
         </div>
         <div className={style.content}>
