@@ -5,7 +5,7 @@ import { useState } from "react";
 import style from "./Dossier.module.css";
 import Image from "next/image";
 
-export default function Dossier(props) {
+export default function Dossier(props: any) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
