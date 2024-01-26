@@ -45,6 +45,9 @@ export default function Home() {
               nomFichier="Tache a faire"
             />
           </Dossier>
+          <Dossier nomFichier="cibles">
+            <Shortcut nomFichier="Scores" openFile={() => setActiveIndex(7)} />
+          </Dossier>
           <Dossier nomFichier="rapport" locked={true}></Dossier>
         </Dossier>
 
@@ -89,6 +92,12 @@ export default function Home() {
           onShow={activeIndex === 6}
           nomFichier="Tache a faire"
           imgUrl="/IMG/Niv1/post_it.png"
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 7}
+          nomFichier="Score"
+          imgUrl="/IMG/Niv1/score.png"
         />
       </section>
     </main>
