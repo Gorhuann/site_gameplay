@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./Lock.module.css";
 
-export default function Lock(props) {
+export default function Lock(props: any) {
   const [userCode, setUserCode] = useState("");
 
   let input: string;

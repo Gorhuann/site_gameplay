@@ -2,7 +2,7 @@
 
 import style from "./Fichier.module.css";
 
-export default function Fichier(props) {
+export default function Fichier(props: any) {
   if (props.onShow) {
     return (
       <div className={style.corps}>
