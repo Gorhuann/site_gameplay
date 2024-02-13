@@ -20,8 +20,8 @@ export default function Dossier(props: any) {
             <Image
               src="/IMG/Dossier/open.png"
               alt="Dossier ouvert"
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
             <p>{props.nomFichier}</p>
           </div>
@@ -29,7 +29,7 @@ export default function Dossier(props: any) {
         {props.children}
       </fieldset>
     );
-  } else if (props.locked) {
+  } else if (open === false || props.locked) {
     return (
       <fieldset className={style.ferme}>
         <legend onClick={handleClick}>
@@ -37,8 +37,8 @@ export default function Dossier(props: any) {
             <Image
               src="/IMG/Dossier/closed.png"
               alt="Dossier fermé"
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
             <p>{props.nomFichier}</p>
           </div>
@@ -53,8 +53,8 @@ export default function Dossier(props: any) {
             <Image
               src="/IMG/Dossier/closed.png"
               alt="Dossier fermé"
-              width={100}
-              height={100}
+              width={80}
+              height={80}
             />
             <p>{props.nomFichier}</p>
           </div>

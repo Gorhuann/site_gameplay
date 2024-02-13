@@ -1,8 +1,7 @@
 :root{
-    --bg-first-section : #818181;
+    --bg-first-section : #fdffff;
     --bg-second-section : #008080;
     --bg-first-file : #c3c3c3;
-    --bg-second-file : #fdffff;
 }
 
 @font-face {
@@ -24,7 +23,7 @@ html, body{
 main{
     display: flex;
     height: 100vh;
-    
+
     font-family: 'W95FA';
 }
 
