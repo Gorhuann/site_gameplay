@@ -2,6 +2,8 @@
     --bg-first-section : #fdffff;
     --bg-second-section : #008080;
     --bg-first-file : #c3c3c3;
+    --bg-second-file : #818181;
+    --bg-header : #010081;
 }
 
 @font-face {
@@ -29,7 +31,7 @@ main{
 
 section:first-of-type{
     width: 40vw;
-    border-right: 1px solid red;
+    border-right: 1px solid var(--bg-second-file);
     overflow-y: scroll;
     background-color: var(--bg-first-section);
 }
@@ -48,13 +50,11 @@ section:last-of-type{
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--bg-second-file);
+    border: 1px solid lightgrey;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--bg-first-file);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
