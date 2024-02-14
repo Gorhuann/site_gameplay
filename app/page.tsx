@@ -10,6 +10,7 @@ import "./page.css";
 
 export default function Home() {
   const [lock_Niv1_PostIt, setLock_Niv1_PostIt] = useState(true);
+  const [lock_Niv1_Rapport, setLock_Niv1_Rapport] = useState(true);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -17,6 +18,10 @@ export default function Home() {
     <main>
       <section>
         <Dossier nomFichier="niveau 1" locked={false}>
+          <Shortcut
+            openFile={() => setActiveIndex(10)}
+            nomFichier="Rapport_de_Situation"
+          />
           <Shortcut
             openFile={() => setActiveIndex(1)}
             nomFichier="Carte de membre"
@@ -42,19 +47,34 @@ export default function Home() {
           >
             <Shortcut
               openFile={() => setActiveIndex(6)}
-              nomFichier="Tache a faire"
+              nomFichier="Tache_a_faire"
             />
           </Dossier>
           <Dossier nomFichier="cibles">
             <Shortcut nomFichier="Scores" openFile={() => setActiveIndex(7)} />
           </Dossier>
-          <Dossier nomFichier="rapport" locked={true}></Dossier>
+          <Dossier
+            nomFichier="rapport"
+            locked={lock_Niv1_Rapport}
+            openFile={() => setActiveIndex(8)}
+          >
+            <Shortcut
+              openFile={() => setActiveIndex(9)}
+              nomFichier="Rapport_Niveau1.pdf"
+            />
+          </Dossier>
         </Dossier>
 
         <Dossier nomFichier="niveau 2" locked={true}></Dossier>
         <Dossier nomFichier="niveau 3" locked={true}></Dossier>
       </section>
       <section>
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 10}
+          nomFichier="Rapport de Situation"
+          imgUrl="/IMG/Niv1/rapport0.jpg"
+        />
         <Fichier
           closeFile={() => setActiveIndex(0)}
           onShow={activeIndex === 1}
@@ -98,6 +118,20 @@ export default function Home() {
           onShow={activeIndex === 7}
           nomFichier="Score"
           imgUrl="/IMG/Niv1/score.png"
+        />
+        <Lock
+          nomLock="Mot de passe dossier rapport"
+          code="4b757274"
+          locked={lock_Niv1_Rapport}
+          onShow={activeIndex === 8}
+          unlocked={() => setLock_Niv1_Rapport(false)}
+          closeFile={() => setActiveIndex(0)}
+        />
+        <Fichier
+          closeFile={() => setActiveIndex(0)}
+          onShow={activeIndex === 9}
+          nomFichier="Rapport du niveau 1"
+          imgUrl="/IMG/Niv1/rapport1.jpg"
         />
       </section>
     </main>
