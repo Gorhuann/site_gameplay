@@ -54,7 +54,7 @@ export default function Home() {
             <Shortcut nomFichier="Scores" openFile={() => setActiveIndex(7)} />
           </Dossier>
           <Dossier
-            nomFichier="rapport"
+            nomFichier="rapport_final"
             locked={lock_Niv1_Rapport}
             openFile={() => setActiveIndex(8)}
           >
@@ -101,7 +101,7 @@ export default function Home() {
         />
         <Lock
           nomLock="Mot de passe dossier post-it"
-          code="4c617261"
+          code="4C617261"
           locked={lock_Niv1_PostIt}
           onShow={activeIndex === 5}
           unlocked={() => setLock_Niv1_PostIt(false)}
@@ -121,7 +121,7 @@ export default function Home() {
         />
         <Lock
           nomLock="Mot de passe dossier rapport"
-          code="4b757274"
+          code="4B757274"
           locked={lock_Niv1_Rapport}
           onShow={activeIndex === 8}
           unlocked={() => setLock_Niv1_Rapport(false)}
